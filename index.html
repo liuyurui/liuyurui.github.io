@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta id="viewport" name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" charset="UTF-8">
+    <title>CAMC WebView Test Center</title>
+    <script type="text/javascript" src="js/amcApp.js"></script>
+    <script type="text/javascript" src="js/amcBase.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+</head>
+    <body>
+
+        <script type="text/javascript">
+          function gotoNaviPage() {
+            var url = urlForPage("/navControl.html");
+            var schemeUrl = "amchqt://extra/browse?func=config&url=" + url;
+            window.location.href = schemeUrl;
+          }
+        </script>
+        
+        <a href="pageRefresh.html" target="_blank">测试主页刷新</a>
+        <br>
+        <button class="baseButton" type="button"  onclick="gotoNaviPage()">跳转导航控制</button>
+        <br>
+        <button class="baseButton" type="button"  onclick="showShare()">显示分享按钮</button>
+    </body>
+</html>
